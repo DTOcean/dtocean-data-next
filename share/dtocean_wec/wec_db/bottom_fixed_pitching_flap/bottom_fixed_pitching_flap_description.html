@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>Oscillating Wave Surge Converter</TITLE>
+</HEAD>
+<BODY BGCOLOR="FFFFFF">
+<HR>
+<H1>Oscillating Wave Surge Converter</H1>
+<H2>General Description</H2>
+<P> The device used in this example is a flap only allowed to pitch around a point located 8.9 m below
+<P> The mean water level.
+
+<H2>Geometry</H2>
+<P> The flap dimensions are 1.8x18x10.9 m.
+<P> The mesh of the submerged part of the barge is shown in the figure below.
+<CENTER><IMG SRC="img/mesh.png" ALIGN="bottom" height="500" width="1000"> </CENTER>
+<P> The mesh is composed of 551 panels.
+
+
+<H2> Body description </H2>
+<P> The rotation point at 8.9 m below the mean water level is the point of application to the equation of motion.
+
+<H2> Mass </H2>
+<P> The inertia tensor is assumed:
+<P> [1850000., 0.0, 0.0;
+<P>  0.0, 1850000., 0.0;
+<P>  0.0, 0.0, 1850000.]
+
+<H2> PTO </H2>
+<P> The PTO damping is assumed to be 4000000 N m s/rad.
+
+<H2> Mooring </H2>
+<P> No mooring stiffness is taken into account.
+
+<H2>Performance Fitting</H2>
+
+
+<HR>
+</BODY>
+</HTML>

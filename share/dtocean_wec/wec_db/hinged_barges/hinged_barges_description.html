@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE>Two Barges Attenuator</TITLE>
+</HEAD>
+<BODY BGCOLOR="FFFFFF">
+<HR>
+<H1>Two Barges Attenuator</H1>
+<H2>General Description</H2>
+<P> The device used in this example consists of two barges and is allowed to move in surge, heave and pitch. 
+<P> Besides, a generalized degree of freedom, a pitching around the joint connection between the two barges,
+<P> is taken into account. Overall, the device motion is modelled through these 3+1 independent modes of motion.
+
+<H2>Geometry</H2>
+<P> Both barges have the exact same geometry 7.85x10x10 m.
+<P> The meshes of the submerged part of both barges are shown in the figure below.
+<CENTER><IMG SRC="img/mesh.png" ALIGN="bottom" height="500" width="1000"> </CENTER>
+<P> The mesh for each barge is composed of 250 panels.
+
+
+<H2> Body description </H2>
+<P> The connection point between the two barges is taken as the (0, 0, 0) of the global reference system.
+<P> The barge situated at the negative-x-side is modelled as the parent of the positive-x-side barge, and 
+<P> this as the child of the negative-x-side barge. The relative degree of freedom between the child and
+<P> its parent is a rotation around the y-axis. 
+
+<H2> Mass </H2>
+<P> The mass of each barge is 785000 kg, while the inertia tensor is assumed:
+<P> [10572805.2083, 0.0, 0.0;
+<P>  0.0, 10572805.2083, 0.0;
+<P>  0.0, 0.0, 10572805.2083] kg m^2.
+
+<H2> PTO </H2>
+<P> The PTO is associated to the generalized pitch mode and the damping coefficient is assumed to be 1200000 N m s/rad.
+
+<H2> Mooring </H2>
+<P> The mooring is associated to the surge mode and the stiffness coefficient is assumed to be 1402000 N/m.
+
+<H2>Performance Fitting</H2>
+
+
+<HR>
+</BODY>
+</HTML>

@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>Pelamis Attenuator</TITLE>
+</HEAD>
+<BODY BGCOLOR="FFFFFF">
+<HR>
+<H1>Pelamis Attenuator</H1>
+<H2>General Description</H2>
+<P> The device used in this example consists of 5 jointed aligned cylinders and is allowed to move in surge, heave and pitch. 
+<P> Besides, generalized degrees of freedom, pitching around the 4 joint connections between consecutive cylinders, are taken
+<P> into account. Overall, the device motion is modelled through these 3+4 independent modes of motion.
+
+<H2>Geometry</H2>
+<P> All cylindrical sections have the exact same geometry of 2 m radius and 36 m length, which leads to an overall length
+<P> of the device of 180 m. The mesh of the submerged part of an intermediate cylinder is shown in the figure below.
+<CENTER><IMG SRC="img/mesh.png" ALIGN="bottom" height="500" width="1000"> </CENTER>
+<P> The mesh is composed of 290 panels but for the heading and the tailing cylinders, which are modelled with 320 panels,
+<P> with the extra 30 panels coming from the heading and tailing submerged circular covers closing the device.
+
+
+<H2> Body description </H2>
+<P> The geometric centre of the device is taken as the (0, 0, 0) of the global reference system. The heading cylinder
+<P> is taken as the first body of the chain and having no parents at all, and the following cylinder as its child. Then,
+<P> consecutive cylinders are parents of their following and children of the former, so that the tailing cylinder, the last
+<P> body in the chain, has no children. The relative degree of freedom between parents and children is a rotation around the
+<P> y-axis.  
+
+<H2> Mass </H2>
+<P> The mass of each cylinder is 1350000 kg, while the inertia tensor is assumed:
+<P> [147150000.0, 0.0, 0.0;
+<P>  0.0, 147150000.0, 0.0;
+<P>  0.0, 0.0, 147150000.0] kg m^2.
+
+<H2> PTO </H2>
+<P> The PTO is associated to the generalized pitch modes and the damping coefficient is assumed to be 250000000 N m s/rad for
+<P> all of them.
+
+<H2> Mooring </H2>
+<P> No mooring stiffness is taken into account.
+
+<H2>Performance Fitting</H2>
+
+
+<HR>
+</BODY>
+</HTML>

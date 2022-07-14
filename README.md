@@ -6,7 +6,7 @@ A store for large non-code files required by the DTOcean modules.
 
 ## Installation
 
-The data package can be installed using the either the [Anaconda Python
+The data package can be installed using either the [Anaconda Python
 Distribution](https://www.anaconda.com/distribution/) `conda` package 
 manager or using a standalone Windows installation file.
 

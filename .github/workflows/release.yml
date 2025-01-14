@@ -11,10 +11,12 @@ jobs:
     steps:
       - name: Setup | Checkout repository at workflow sha
         uses: actions/checkout@v4
+        with:
+          lfs: true
       - run: |
-          tar czf nemoh-linux-${{ github.event.release.tag_name }}.tar.gz share
-          7z a -tzip nemoh-win64-${{ github.event.release.tag_name }}.zip share
-          gh release upload ${{github.event.release.tag_name}} nemoh-linux-${{ github.event.release.tag_name }}.tar.gz
-          gh release upload ${{github.event.release.tag_name}} nemoh-win64-${{ github.event.release.tag_name }}.zip
+          tar czf dtocean-data-${{ github.event.release.tag_name }}.tar.gz share
+          7z a -tzip dtocean-data-${{ github.event.release.tag_name }}.zip share
+          gh release upload ${{github.event.release.tag_name}} dtocean-data-${{ github.event.release.tag_name }}.tar.gz
+          gh release upload ${{github.event.release.tag_name}} dtocean-data-${{ github.event.release.tag_name }}.zip
         env:
           GITHUB_TOKEN: ${{ github.TOKEN }}

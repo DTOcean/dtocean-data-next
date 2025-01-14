@@ -4,3 +4,4 @@
 *.V filter=lfs diff=lfs merge=lfs -text
 *.xyz filter=lfs diff=lfs merge=lfs -text
 *.hdf5 filter=lfs diff=lfs merge=lfs -text
+*.V linguist-vendored
